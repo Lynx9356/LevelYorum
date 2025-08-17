@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMaster.master.cs" Inherits="LevelYorum.UserMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Assets/CSS/User.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="header">
+                <a href="Default.aspx">
+                    <img src="Foto/LevelYorum.png" width="150"></a>
+                <h1 class="sayfaAdi">LevelYorum</h1>
+                <div class="kullaniciAdi">
+                    <asp:Panel ID="pnl_girisVar" runat="server" Visible="false">
+                        <asp:Label ID="lbl_kullaniciadi" class="kullaniciAdi" runat="server"></asp:Label>
+                        <asp:LinkButton ID="lbtn_cikis" runat="server" OnClick="lbtn_cikis_Click">Çıkış Yap</asp:LinkButton>
+                    </asp:Panel>
+                    <asp:Panel ID="pnl_girisYok" runat="server" Visible="true">
+                        <a href="UserLogin.aspx">Giriş Yap</a>
+                        <a href="KayitOl.aspx">Kayıt Ol</a>
+                    </asp:Panel>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

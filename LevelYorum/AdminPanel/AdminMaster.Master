@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="LevelYorum.AdminPanel.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Assets/AdminPanel.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="header">
+                <a href="Default.aspx">
+                    <img src="../Foto/LevelYorum.png" width="150"></a>
+                <h1 class="sayfaAdi">Level Yorum</h1>
+                <div class="kullaniciAdi">
+                    <asp:Label ID="lbl_kullaniciadi" class="kullaniciAdi" runat="server"></asp:Label>
+                    <asp:LinkButton ID="lbtn_cikis" runat="server" OnClick="lbtn_cikis_Click">Çıkış Yap</asp:LinkButton>
+                </div>
+            </div>
+            <div class="container">
+                <div class="sidebar">
+                    <a href="Default.aspx">
+                        <div class="menuItem">Ana Sayfa</div>
+                    </a>
+                    <br />
+                    <label>Tür İşlemleri</label>
+                    <a href="TurleriListele.aspx">
+                        <div class="menuItem">Türleri Listele</div>
+                    </a>
+                    <a href="TurEkle.aspx">
+                        <div class="menuItem">Tür Ekle</div>
+                    </a>
+                    <br />
+                    <label>Oyun İşlemleri</label>
+                    <a href="OyunListele.aspx">
+                        <div class="menuItem">Oyunları Listele</div>
+                    </a>
+                    <a href="OyunEkle.aspx">
+                        <div class="menuItem">Oyun Ekle</div>
+                    </a>
+                    <a href="OyunKategorisiEkle.aspx">
+                        <div class="menuItem">Oyun Kategori Ekle</div>
+                    </a>
+                    <a href="OyunKategoriSilme.aspx">
+                        <div class="menuItem">Oyun Kategori Silme</div>
+                    </a>
+                    <br />
+                    <asp:Panel ID="pnl_adminicin" runat="server" Visible="false">
+                        <label>Kullanıcı İşlemleri</label>
+                        <a href="KullaniciListele.aspx">
+                            <div class="menuItem">Kullanıcı Listele</div>
+                        </a>
+                        <a href="KullaniciEkle.aspx">
+                            <div class="menuItem">Kullanıcı Ekle</div>
+                        </a>
+                    </asp:Panel>
+                    <br />
+                    <label>Yorum İşlemleri</label>
+                    <a href="YorumListele.aspx">
+                        <div class="menuItem">Yorumları Listele</div>
+                    </a>
+                </div>
+                <div class="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

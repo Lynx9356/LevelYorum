@@ -1,0 +1,161 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    font-family: 'Segoe Script';
+    height: 180px;
+}
+
+.sayfaAdi {
+    margin: 30px;
+    font-size: 85px;
+}
+
+.kullaniciAdi {
+    margin: 61px 61px 0 0;
+    font-size: 30px;
+}
+
+    .kullaniciAdi a {
+        text-decoration: none;
+        color: black;
+        margin-left: 10px;
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 8px;
+    }
+
+        .kullaniciAdi a:hover {
+            background-color: aqua;
+        }
+
+.sidebar {
+    width: 200px;
+    background-color: antiquewhite;
+    padding: 10px 10px 22% 30px;
+    float: left;
+    justify-content: space-between;
+}
+
+.container {
+}
+
+.sidebar .butonlar a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 40px;
+    padding: 1px 1px 1px 0;
+}
+
+    .sidebar .butonlar a:hover {
+        background-color: aquamarine;
+    }
+
+.sidebar .mastermenu {
+    display: grid;
+    text-align: center;
+    margin-top: 15px;
+}
+
+    .sidebar .mastermenu a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        font-weight: 500;
+        border-top: 1px solid black;
+        padding: 5px;
+    }
+
+        .sidebar .mastermenu a:last-child {
+            border-bottom: 1px solid black;
+        }
+
+        .sidebar .mastermenu a:hover {
+            background-color: aquamarine;
+        }
+
+    .sidebar .mastermenu img {
+        float: left;
+    }
+
+.content {
+}
+
+.card {
+    float: left;
+    width: 75%;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+    .card .cardContent {
+        border: 1px solid black;
+        float: left;
+        margin: 0px 50px 50px 0px;
+    }
+
+        .card .cardContent .cardTitle {
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            padding-top: 20px;
+        }
+
+        .card .cardContent .cardFoto {
+            justify-content: center;
+            display: flex;
+        }
+
+        .card .cardContent .ozet {
+            text-decoration: none;
+            color: black;
+        }
+
+        .card .cardContent .cardFoto img {
+            width: 75px;
+        }
+
+.detayPage {
+    width: 80%;
+    float: left;
+    margin: auto;
+    display: grid;
+    justify-items: center;
+}
+
+    .detayPage .detayFooter {
+        display: grid;
+        margin-top: 10px;
+    }
+
+        .detayPage .detayFooter a {
+            x display: grid;
+            text-decoration: none;
+            border: 1px solid gray;
+            color: green;
+            margin-top: 10px;
+            text-align: center;
+            border-radius: 30px;
+        }
+
+            .detayPage .detayFooter a:hover {
+                background-color: gold;
+            }
+
+.yorum {
+    margin-top: 7px;
+    border: 1px solid gray;
+    padding: 2px;
+}
+
+.tumYorumlar {
+    margin-top: 25px;
+}

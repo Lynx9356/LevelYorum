@@ -1,0 +1,6 @@
+C:\Users\celil\source\repos\LevelYorum\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\celil\source\repos\LevelYorum\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\celil\source\repos\LevelYorum\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\celil\source\repos\LevelYorum\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\celil\source\repos\LevelYorum\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\celil\source\repos\LevelYorum\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
