@@ -6,10 +6,14 @@
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: antiquewhite;
-    font-family: 'Segoe Script';
+    background-color: darkorange;
+    font-family: 'Times New Roman', Times, serif;
     height: 180px;
 }
+
+    .header img {
+        padding-left: 35px;
+    }
 
 .sayfaAdi {
     margin: 30px;
@@ -17,26 +21,34 @@
 }
 
 .kullaniciAdi {
-    margin: 61px 61px 0 0;
-    font-size: 30px;
+    display: flex;
+    flex-direction: column; /* kullanıcı adını sağa yatırmak için */
+    align-items: flex-end; /* çıkış yap yazısını sağa yatırmak için */
+    margin: 45px 61px;
+    font-size: 32px;
 }
+
+    .kullaniciAdi .kullaniciAdi {
+        margin: 0 0 8px 0; /* Bunu kullanmamızın sebebi ekranda yazılar arasında fazla boşluk oluyor */
+    }
 
     .kullaniciAdi a {
         text-decoration: none;
         color: black;
-        margin-left: 10px;
         border: 1px solid black;
         border-radius: 20px;
         padding: 8px;
+        margin: 10px 30px;
+        font-size: 24px;
     }
 
         .kullaniciAdi a:hover {
-            background-color: aqua;
+            background-color: Highlight;
         }
 
 .sidebar {
     width: 200px;
-    background-color: antiquewhite;
+    background-color: darkorange;
     padding: 10px 10px 22% 30px;
     float: left;
     justify-content: space-between;

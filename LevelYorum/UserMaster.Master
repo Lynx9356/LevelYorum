@@ -22,12 +22,25 @@
                         <asp:LinkButton ID="lbtn_cikis" runat="server" OnClick="lbtn_cikis_Click">Çıkış Yap</asp:LinkButton>
                     </asp:Panel>
                     <asp:Panel ID="pnl_girisYok" runat="server" Visible="true">
-                        <a href="UserLogin.aspx">Giriş Yap</a>
-                        <a href="KayitOl.aspx">Kayıt Ol</a>
+                        <a href="#">Giriş Yap</a>
+                        <a href="#">Kayıt Ol</a>
                     </asp:Panel>
                 </div>
             </div>
-
+            <div class="container">
+                <div class="sidebar">
+                    <div class="butonlar">
+                        <asp:LinkButton ID="lbtn_aksiyon" runat="server" OnClick="lbtn_aksiyon_Click">Aksiyon</asp:LinkButton>
+                        <asp:LinkButton ID="lbtn_strateji" runat="server" OnClick="lbtn_strateji_Click">Strateji</asp:LinkButton>
+                        <asp:LinkButton ID="lbtn_simulasyon" runat="server" OnClick="lbtn_simulasyon_Click">Simulasyon</asp:LinkButton>
+                        <asp:LinkButton ID="lbtn_rolYapma" runat="server" OnClick="lbtn_rolYapma_Click">Rol Yapma</asp:LinkButton>
+                    </div>
+                </div>
+                <div class="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
         </div>
     </form>
 </body>

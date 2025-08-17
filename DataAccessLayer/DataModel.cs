@@ -782,6 +782,55 @@ namespace DataAccessLayer
                 con.Close();
             }
         }
+        public Kullanicilar KullaniciGetir(string kullaniciadi, string sifre)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT COUNT(*) FROM Kullanicilar WHERE KullaniciAdi=@kullanıcıAdı AND Sifre=@şifre";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@kullanıcıAdı", kullaniciadi);
+                cmd.Parameters.AddWithValue("@şifre", sifre);
+                con.Open();
+                int sayi = Convert.ToInt32(cmd.ExecuteScalar());
+                if (sayi > 0)
+                {
+                    cmd.CommandText = "SELECT k.ID,k.Isim,k.Soyisim,k.KullaniciAdi,k.Sifre,k.KullaniciTurID,kt.Isim,k.Durum FROM Kullanicilar AS k JOIN KullaniciTur AS kt ON kt.ID = k.KullaniciTurID WHERE k.KullaniciAdi=@kullaniciAdi AND k.Sifre=@sifre";
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@kullaniciAdi", kullaniciadi);
+                    cmd.Parameters.AddWithValue("@sifre", sifre);
+                    //con.Open(); SAKIN TEKRARDAN AÇMA!!!!!!
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    Kullanicilar k = new Kullanicilar();
+                    while (reader.Read())
+                    {
+
+                        k.ID = reader.GetInt32(0);
+                        k.Isim = reader.GetString(1);
+                        k.Soyisim = reader.GetString(2);
+                        k.KullaniciAdi = reader.GetString(3);
+                        k.Sifre = reader.GetString(4);
+                        k.KullaniciTurID = reader.GetInt32(5);
+                        k.KullaniciTurStr = reader.GetString(6);
+                        k.Durum = reader.GetBoolean(7);
+                        k.DurumStr = reader.GetBoolean(7) ? "<label style='color:green'>Aktif</label>" : "<label style='color:red'>Pasif</label>";
+                    }
+                    return k;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch
+            {
+
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
         #endregion
         #region Yardımcı İşlemler
         public bool VeriKontrol(string tablo, string kolon, string veri)
