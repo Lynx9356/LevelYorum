@@ -9,9 +9,13 @@ using System.Web.UI.WebControls;
 namespace LevelYorum
 {
     public partial class UserMaster : System.Web.UI.MasterPage
-    { DataModel dm = new DataModel();
+    { 
+        DataModel dm = new DataModel();
         protected void Page_Load(object sender, EventArgs e)
         {
+            rpt_kategoriler.DataSource = dm.TurListele();
+            rpt_kategoriler.DataBind();
+
             if (Session["kullanici"] != null)
             {
                 pnl_girisYok.Visible = false;
@@ -28,27 +32,17 @@ namespace LevelYorum
 
         protected void lbtn_cikis_Click(object sender, EventArgs e)
         {
-
+            Session["kullanici"] = null;
+            Response.Redirect("Default.aspx");
         }
 
-        protected void lbtn_aksiyon_Click(object sender, EventArgs e)
+        protected void rpt_kategoriler_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
-
-        }
-
-        protected void lbtn_strateji_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void lbtn_simulasyon_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void lbtn_rolYapma_Click(object sender, EventArgs e)
-        {
-
+            if (e.CommandName == "KategoriSec")
+            {
+                int turID = Convert.ToInt32(e.CommandArgument);
+                Response.Redirect("~/Default.aspx?turID=" + turID);
+            }
         }
     }
 }

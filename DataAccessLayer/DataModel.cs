@@ -215,6 +215,82 @@ namespace DataAccessLayer
             }
 
         }
+        public List<Oyunlar> OyunListele(bool durum)
+        {
+            try
+            {
+                List<Oyunlar> oyunlar = new List<Oyunlar>();
+                cmd.CommandText = "SELECT * FROM Oyunlar WHERE Durum=@durum";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@durum", durum);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Oyunlar o = new Oyunlar();
+                    o.ID = reader.GetInt32(0);
+                    o.Isim = reader.GetString(1);
+                    o.Ozet = reader.GetString(2);
+                    o.Detay = reader.GetString(3);
+                    o.Foto = reader.GetString(4);
+                    o.Durum = reader.GetBoolean(5);
+                    o.DurumStr = reader.GetBoolean(5) ? "<label style='color:green'>Aktif</label>" : "<label style='color:red'>Pasif</label>";
+                    oyunlar.Add(o);
+                }
+                con.Close();
+                foreach (Oyunlar item in oyunlar)
+                {
+                    item.KategoriStr = TurStr(item.ID);
+                }
+
+                return oyunlar;
+
+            }
+            catch
+            {
+
+                return null;
+            }
+
+        }
+        public List<Oyunlar> OyunListele(int turID)
+        {
+            try
+            {
+                List<Oyunlar> oyunlar = new List<Oyunlar>();
+                cmd.CommandText = "SELECT o.ID,o.Isim,o.Ozet,o.Detay,o.Foto,o.Durum FROM Oyunlar AS o JOIN Kategoriler AS k ON o.ID=k.OyunID JOIN Turler AS t ON t.ID=k.TurID WHERE k.TurID=@turID";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@turID", turID);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Oyunlar o = new Oyunlar();
+                    o.ID = reader.GetInt32(0);
+                    o.Isim = reader.GetString(1);
+                    o.Ozet = reader.GetString(2);
+                    o.Detay = reader.GetString(3);
+                    o.Foto = reader.GetString(4);
+                    o.Durum = reader.GetBoolean(5);
+                    o.DurumStr = reader.GetBoolean(5) ? "<label style='color:green'>Aktif</label>" : "<label style='color:red'>Pasif</label>";
+                    oyunlar.Add(o);
+                }
+                con.Close();
+                foreach (Oyunlar item in oyunlar)
+                {
+                    item.KategoriStr = TurStr(item.ID);
+                }
+
+                return oyunlar;
+
+            }
+            catch
+            {
+
+                return null;
+            }
+
+        }
         public bool OyunDurumDegis(int id)
         {
             try

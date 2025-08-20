@@ -30,10 +30,13 @@
             <div class="container">
                 <div class="sidebar">
                     <div class="butonlar">
-                        <asp:LinkButton ID="lbtn_aksiyon" runat="server" OnClick="lbtn_aksiyon_Click">Aksiyon</asp:LinkButton>
-                        <asp:LinkButton ID="lbtn_strateji" runat="server" OnClick="lbtn_strateji_Click">Strateji</asp:LinkButton>
-                        <asp:LinkButton ID="lbtn_simulasyon" runat="server" OnClick="lbtn_simulasyon_Click">Simulasyon</asp:LinkButton>
-                        <asp:LinkButton ID="lbtn_rolYapma" runat="server" OnClick="lbtn_rolYapma_Click">Rol Yapma</asp:LinkButton>
+                        <asp:Repeater ID="rpt_kategoriler" runat="server" OnItemCommand="rpt_kategoriler_ItemCommand">
+                            <ItemTemplate>
+                                <asp:LinkButton ID="lbtn_turler" runat="server" CommandName="KategoriSec" CommandArgument='<%# Eval("ID") %>' CssClass="kategori">
+                                    <h3><%# Eval("Isim") %></h3>
+                                </asp:LinkButton>
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </div>
                 </div>
                 <div class="content">
