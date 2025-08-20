@@ -3,19 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83DC6799-993F-4012-9660-80D524572C11}|LevelYorum\\LevelYorum.csproj|C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\levelyorum\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{83DC6799-993F-4012-9660-80D524572C11}|LevelYorum\\LevelYorum.csproj|solutionrelative:levelyorum\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{83DC6799-993F-4012-9660-80D524572C11}|LevelYorum\\LevelYorum.csproj|C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\levelyorum\\usermaster.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{83DC6799-993F-4012-9660-80D524572C11}|LevelYorum\\LevelYorum.csproj|solutionrelative:levelyorum\\usermaster.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83DC6799-993F-4012-9660-80D524572C11}|LevelYorum\\LevelYorum.csproj|c:\\users\\celil\\onedrive\\belgeler\\github\\levelyorum\\levelyorum\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{83DC6799-993F-4012-9660-80D524572C11}|LevelYorum\\LevelYorum.csproj|solutionrelative:levelyorum\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{83DC6799-993F-4012-9660-80D524572C11}|LevelYorum\\LevelYorum.csproj|C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\levelyorum\\usermaster.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83DC6799-993F-4012-9660-80D524572C11}|LevelYorum\\LevelYorum.csproj|solutionrelative:levelyorum\\usermaster.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD506005-4AC1-42EC-9130-14995C283908}|DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\celil\\onedrive\\belgeler\\github\\levelyorum\\dataaccesslayer\\datamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DD506005-4AC1-42EC-9130-14995C283908}|DataAccessLayer\\DataAccessLayer.csproj|C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\dataaccesslayer\\datamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD506005-4AC1-42EC-9130-14995C283908}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\datamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -39,12 +39,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAALIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-16T11:10:00.437Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UserMaster.Master",
               "DocumentMoniker": "C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\LevelYorum\\UserMaster.Master",
               "RelativeDocumentMoniker": "LevelYorum\\UserMaster.Master",
@@ -64,7 +63,7 @@
               "RelativeDocumentMoniker": "LevelYorum\\UserMaster.Master.cs",
               "ToolTip": "C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\LevelYorum\\UserMaster.Master.cs",
               "RelativeToolTip": "LevelYorum\\UserMaster.Master.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABMAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-17T10:49:40.84Z",
               "IsPinned": true,
@@ -72,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Default.aspx",
               "DocumentMoniker": "C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\LevelYorum\\Default.aspx",
               "RelativeDocumentMoniker": "LevelYorum\\Default.aspx",

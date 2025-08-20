@@ -22,8 +22,8 @@
                         <asp:LinkButton ID="lbtn_cikis" runat="server" OnClick="lbtn_cikis_Click">Çıkış Yap</asp:LinkButton>
                     </asp:Panel>
                     <asp:Panel ID="pnl_girisYok" runat="server" Visible="true">
-                        <a href="#">Giriş Yap</a>
-                        <a href="#">Kayıt Ol</a>
+                        <a href="UserLogin.aspx">Giriş Yap</a>
+                        <a href="KayitOl.aspx">Kayıt Ol</a>
                     </asp:Panel>
                 </div>
             </div>

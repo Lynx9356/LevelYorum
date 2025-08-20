@@ -1,3 +1,79 @@
-﻿body{
+﻿body {
+    background-image: url("../../Foto/god-of-war-2017-to.jpg"); /* Arka plan fotoğrafı kullandığım için body kısmına img url ekledim */
+    background-size: cover; /* Ekranı tamamen kaplar */
+    background-position: center; /* Ortalar */
+    background-repeat: no-repeat;
+    min-height: 85vh; /* Tam ekran yüksekliği */
+    margin: 0;
+    padding: 0;
+}
 
+.loginLogo {
+    display: block;
+    margin: 0 auto 24px auto;
+    max-width: 120px;
+    height: auto;
+}
+
+.loginbox {
+    position: center; /* Üstte kalır */
+    z-index: 2; /* Arka plandan önde */
+    width: 350px;
+    margin: 100px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.7); /* Hafif şeffaf arka plan */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,1); /* Hafif gölge efekti verir */
+}
+
+.kullaniciAdi {
+    font-size: 17px;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.isim {
+    font-size: 17px;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.soyIsim {
+    font-size: 17px;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.sifre {
+    font-size: 17px;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.girisButon {
+    text-align: center;
+    margin-top: 40px;
+}
+
+    .girisButon a {
+        margin-top: 20px;
+        text-decoration: none;
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 40px;
+        font-weight: 800;
+        color: black;
+    }
+
+        .girisButon a:hover {
+            background-color: Highlight;
+        }
+
+.basarisiz {
+    background-color: red;
+    padding: 10px;
+    text-align: center;
+    border-radius: 25px;
+    color: white;
+    margin-bottom: 50px;
 }
