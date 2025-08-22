@@ -29,6 +29,7 @@
             </div>
             <div class="container">
                 <div class="sidebar">
+                    <h1>Kategoriler</h1>
                     <div class="butonlar">
                         <asp:Repeater ID="rpt_kategoriler" runat="server" OnItemCommand="rpt_kategoriler_ItemCommand">
                             <ItemTemplate>

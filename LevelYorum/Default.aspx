@@ -10,6 +10,7 @@
                     <div class="oyun">
                         <img src="../Foto/<%# Eval("Foto") %>" width="200" height="150" />
                         <h3><%# Eval("Isim") %></h3>
+                        <h3><%# Eval("Ozet") %></h3>
                     </div>
                 </div>
             </a>
