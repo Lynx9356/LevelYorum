@@ -15,18 +15,18 @@ namespace LevelYorum.AdminPanel
         {
             if (!IsPostBack)
             {
-                // Son 5 oyun
-                var oyunlar = dm.OyunListele()?.OrderByDescending(x => x.ID).Take(5).ToList();
+                //Son 5 Oyun
+                List<Oyunlar> oyunlar = dm.SonOyunlar();
                 rpt_SonOyunlar.DataSource = oyunlar;
                 rpt_SonOyunlar.DataBind();
 
                 // Son 5 kullanıcı
-                var kullanicilar = dm.KullaniciListele()?.OrderByDescending(x => x.ID).Take(5).ToList();
+                List<Kullanicilar> kullanicilar = dm.SonKullanicilar();
                 rpt_SonKullanicilar.DataSource = kullanicilar;
                 rpt_SonKullanicilar.DataBind();
 
                 // Son 5 yorum
-                var yorumlar = dm.YorumListele()?.OrderByDescending(x => x.ID).Take(5).ToList();
+                List<Yorumlar> yorumlar = dm.SonYorumlar();
                 rpt_SonYorumlar.DataSource = yorumlar;
                 rpt_SonYorumlar.DataBind();
             }

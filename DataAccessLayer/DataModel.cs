@@ -215,6 +215,43 @@ namespace DataAccessLayer
             }
 
         }
+        public List<Oyunlar> SonOyunlar()
+        {
+            try
+            {
+                List<Oyunlar> oyunlar = new List<Oyunlar>();
+                cmd.CommandText = "SELECT * FROM Oyunlar WHERE ID > (SELECT MAX(ID) - 5 FROM Oyunlar) ORDER BY ID DESC";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Oyunlar o = new Oyunlar();
+                    o.ID = reader.GetInt32(0);
+                    o.Isim = reader.GetString(1);
+                    o.Ozet = reader.GetString(2);
+                    o.Detay = reader.GetString(3);
+                    o.Foto = reader.GetString(4);
+                    o.Durum = reader.GetBoolean(5);
+                    o.DurumStr = reader.GetBoolean(5) ? "<label style='color:green'>Aktif</label>" : "<label style='color:red'>Pasif</label>";
+                    oyunlar.Add(o);
+                }
+                con.Close();
+                foreach (Oyunlar item in oyunlar)
+                {
+                    item.KategoriStr = TurStr(item.ID);
+                }
+
+                return oyunlar;
+
+            }
+            catch
+            {
+
+                return null;
+            }
+
+        }
         public List<Oyunlar> OyunListele(bool durum)
         {
             try
@@ -515,6 +552,41 @@ namespace DataAccessLayer
                 con.Close();
             }
         }
+        public List<Kullanicilar> SonKullanicilar()
+        {
+            try
+            {
+                List<Kullanicilar> kullanıcılar = new List<Kullanicilar>();
+                cmd.CommandText = "SELECT k.ID,k.Isim,k.Soyisim,k.KullaniciAdi,k.Sifre,k.KullaniciTurID,kt.Isim,k.Durum FROM Kullanicilar AS k JOIN KullaniciTur AS kt ON kt.ID = k.KullaniciTurID WHERE k.ID > (SELECT MAX(ID) - 5 FROM Kullanicilar) ORDER BY k.ID DESC";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Kullanicilar k = new Kullanicilar();
+                    k.ID = reader.GetInt32(0);
+                    k.Isim = reader.GetString(1);
+                    k.Soyisim = reader.GetString(2);
+                    k.KullaniciAdi = reader.GetString(3);
+                    k.Sifre = reader.GetString(4);
+                    k.KullaniciTurID = reader.GetInt32(5);
+                    k.KullaniciTurStr = reader.GetString(6);
+                    k.Durum = reader.GetBoolean(7);
+                    k.DurumStr = reader.GetBoolean(7) ? "<label style='color:green'>Aktif</label>" : "<label style='color:red'>Pasif</label>";
+                    kullanıcılar.Add(k);
+                }
+                return kullanıcılar;
+            }
+            catch
+            {
+
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
         public Kullanicilar KullaniciGetir(int id)
         {
             try
@@ -640,6 +712,40 @@ namespace DataAccessLayer
             {
                 List<Yorumlar> yorumlar = new List<Yorumlar>();
                 cmd.CommandText = "SELECT y.ID,k.ID,k.KullaniciAdi,o.ID,o.Isim,y.Icerik,y.Durum FROM Yorumlar AS y JOIN Kullanicilar AS k ON k.ID = y.KullaniciID JOIN Oyunlar AS o ON o.ID = y.OyunID";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Yorumlar y = new Yorumlar();
+                    y.ID = reader.GetInt32(0);
+                    y.KullaniciID = reader.GetInt32(1);
+                    y.KullaniciStr = reader.GetString(2);
+                    y.OyunID = reader.GetInt32(3);
+                    y.OyunStr = reader.GetString(4);
+                    y.Icerik = reader.GetString(5);
+                    y.Durum = reader.GetBoolean(6);
+                    y.DurumStr = reader.GetBoolean(6) ? "<label style='color:green'>Aktif</label>" : "<label style='color:red'>Pasif</label>";
+                    yorumlar.Add(y);
+                }
+                return yorumlar;
+            }
+            catch
+            {
+
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public List<Yorumlar> SonYorumlar()
+        {
+            try
+            {
+                List<Yorumlar> yorumlar = new List<Yorumlar>();
+                cmd.CommandText = "SELECT y.ID,k.ID,k.KullaniciAdi,o.ID,o.Isim,y.Icerik,y.Durum FROM Yorumlar AS y JOIN Kullanicilar AS k ON k.ID = y.KullaniciID JOIN Oyunlar AS o ON o.ID = y.OyunID WHERE y.ID > (SELECT MAX(ID) - 5 FROM Yorumlar) ORDER BY y.ID DESC";
                 cmd.Parameters.Clear();
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
