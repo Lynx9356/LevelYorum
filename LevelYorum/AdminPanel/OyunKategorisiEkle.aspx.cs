@@ -33,7 +33,7 @@ namespace LevelYorum.AdminPanel
             {
                 if (Convert.ToInt32(ddl_turler.SelectedItem.Value) != 0)
                 {
-                    if (dm.OyunKategoriVeriKontrol("Kategoriler", "OyunID", Convert.ToInt32(ddl_oyunlar.SelectedItem.Value)))
+                    if (dm.OyunKategoriVeriKontrol("Kategoriler", "OyunID", "TurID", Convert.ToInt32(ddl_oyunlar.SelectedItem.Value), Convert.ToInt32(ddl_turler.SelectedItem.Value)))
                     {
                         Kategoriler k = new Kategoriler();
                         k.OyunID = Convert.ToInt32(ddl_oyunlar.SelectedItem.Value);

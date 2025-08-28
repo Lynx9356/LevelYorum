@@ -8,9 +8,8 @@
             <a href="DetaySayfasi.aspx?oyunID=<%# Eval("ID") %>">
                 <div class="userPage">
                     <div class="oyun">
-                        <img src="../Foto/<%# Eval("Foto") %>" width="200" height="150" />
+                        <img src="../Foto/<%# Eval("Foto") %>" width="200" height="200" />
                         <h3><%# Eval("Isim") %></h3>
-                        <h3><%# Eval("Ozet") %></h3>
                     </div>
                 </div>
             </a>

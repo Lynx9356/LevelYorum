@@ -7,16 +7,8 @@
       "RelativeMoniker": "D:0:0:{83DC6799-993F-4012-9660-80D524572C11}|LevelYorum\\LevelYorum.csproj|solutionrelative:levelyorum\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83DC6799-993F-4012-9660-80D524572C11}|LevelYorum\\LevelYorum.csproj|C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\levelyorum\\assets\\css\\user.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{83DC6799-993F-4012-9660-80D524572C11}|LevelYorum\\LevelYorum.csproj|solutionrelative:levelyorum\\assets\\css\\user.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83DC6799-993F-4012-9660-80D524572C11}|LevelYorum\\LevelYorum.csproj|C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\levelyorum\\detaysayfasi.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83DC6799-993F-4012-9660-80D524572C11}|LevelYorum\\LevelYorum.csproj|solutionrelative:levelyorum\\detaysayfasi.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83DC6799-993F-4012-9660-80D524572C11}|LevelYorum\\LevelYorum.csproj|c:\\users\\celil\\onedrive\\belgeler\\github\\levelyorum\\levelyorum\\detaysayfasi.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{83DC6799-993F-4012-9660-80D524572C11}|LevelYorum\\LevelYorum.csproj|solutionrelative:levelyorum\\detaysayfasi.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{83DC6799-993F-4012-9660-80D524572C11}|LevelYorum\\LevelYorum.csproj|c:\\users\\celil\\onedrive\\belgeler\\github\\levelyorum\\levelyorum\\adminpanel\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{83DC6799-993F-4012-9660-80D524572C11}|LevelYorum\\LevelYorum.csproj|solutionrelative:levelyorum\\adminpanel\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD506005-4AC1-42EC-9130-14995C283908}|DataAccessLayer\\DataAccessLayer.csproj|C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\dataaccesslayer\\datamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "DataModel.cs",
               "DocumentMoniker": "C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\DataAccessLayer\\DataModel.cs",
               "RelativeDocumentMoniker": "DataAccessLayer\\DataModel.cs",
               "ToolTip": "C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\DataAccessLayer\\DataModel.cs",
               "RelativeToolTip": "DataAccessLayer\\DataModel.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAAMICAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-16T11:10:00.437Z",
               "IsPinned": true,
@@ -49,52 +41,16 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "User.css",
-              "DocumentMoniker": "C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\LevelYorum\\Assets\\CSS\\User.css",
-              "RelativeDocumentMoniker": "LevelYorum\\Assets\\CSS\\User.css",
-              "ToolTip": "C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\LevelYorum\\Assets\\CSS\\User.css",
-              "RelativeToolTip": "LevelYorum\\Assets\\CSS\\User.css",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAAAFkAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-22T13:22:17.907Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DetaySayfasi.aspx",
-              "DocumentMoniker": "C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\LevelYorum\\DetaySayfasi.aspx",
-              "RelativeDocumentMoniker": "LevelYorum\\DetaySayfasi.aspx",
-              "ToolTip": "C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\LevelYorum\\DetaySayfasi.aspx",
-              "RelativeToolTip": "LevelYorum\\DetaySayfasi.aspx",
+              "Title": "Default.aspx",
+              "DocumentMoniker": "C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\LevelYorum\\AdminPanel\\Default.aspx",
+              "RelativeDocumentMoniker": "LevelYorum\\AdminPanel\\Default.aspx",
+              "ToolTip": "C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\LevelYorum\\AdminPanel\\Default.aspx",
+              "RelativeToolTip": "LevelYorum\\AdminPanel\\Default.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-08-20T11:20:35.208Z",
+              "WhenOpened": "2025-08-28T12:14:32.63Z",
               "IsPinned": true,
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DetaySayfasi.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\LevelYorum\\DetaySayfasi.aspx.cs",
-              "RelativeDocumentMoniker": "LevelYorum\\DetaySayfasi.aspx.cs",
-              "ToolTip": "C:\\Users\\celil\\OneDrive\\Belgeler\\GitHub\\LevelYorum\\LevelYorum\\DetaySayfasi.aspx.cs",
-              "RelativeToolTip": "LevelYorum\\DetaySayfasi.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T11:20:36.461Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
@@ -106,8 +62,17 @@
               "RelativeToolTip": "LevelYorum\\Default.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-08-23T19:02:35.654Z",
+              "WhenOpened": "2025-08-28T12:24:07.378Z",
+              "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

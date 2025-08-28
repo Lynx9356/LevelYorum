@@ -10,6 +10,7 @@
 .adminDefaultPage {
     border: 3px solid red;
     margin: 5% 20% 0 20%;
+    padding-bottom: 5%;
 }
 
 .header {
@@ -58,7 +59,7 @@
 .sidebar {
     width: 243px;
     background-color: darkorange;
-    padding: 10px 10px 5% 30px;
+    padding: 10px 10px 15% 30px;
     float: left;
 }
 
@@ -95,6 +96,21 @@
         text-align: center;
     }
 
+        .content .tablo a {
+            text-decoration: none;
+            color: black;
+            border: 1px solid gray;
+            margin: 3px;
+            padding: 5px;
+            border-radius: 20px;
+            background-color: green;
+        }
+
+            .content .tablo a:hover {
+                background-color: Highlight !important;
+                color: white !important;
+            }
+
         .content .tablo th {
             padding: 3px;
         }
@@ -102,6 +118,7 @@
         .content .tablo td {
             padding: 10px;
         }
+
 
 .DegisButon {
     text-decoration: none;
@@ -113,20 +130,10 @@
     border-radius: 20px;
 }
 
-.content .tablo a:hover {
-    background-color: red !important;
-    color: white;
-}
-
-.content .tablo a {
-    text-decoration: none;
-    color: black;
-    border: 1px solid gray;
-    margin: 3px;
-    padding: 5px;
-    border-radius: 20px;
-    background-color: green;
-}
+    .DegisButon:hover {
+        background-color: Highlight !important;
+        color: white !important;
+    }
 
 .row {
     margin: 15px 0 15px 15px;
@@ -141,6 +148,11 @@
     padding: 5px;
     border-radius: 20px;
 }
+
+    .ekleButon:hover {
+        background-color: Highlight !important;
+        color: white !important;
+    }
 
 .basarili {
     background-color: green;
@@ -167,6 +179,11 @@
     display: flex;
 }
 
+    .yorumButon:hover {
+        color: white !important;
+        background-color: Highlight;
+    }
+
 .yorumbuton {
     display: flex;
     justify-content: space-between;
@@ -186,5 +203,5 @@
 
         .yorumbuton a:hover {
             background-color: brown;
-            color: white;
+            color: white !important;
         }

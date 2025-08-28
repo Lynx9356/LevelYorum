@@ -14,7 +14,6 @@
                             <th>Oyun No</th>
                             <th>Oyun İsmi</th>
                             <th>Oyun Özeti</th>
-                            <th>Oyun Detay</th>
                             <th>Oyun Kategorileri</th>
                             <th>Durum</th>
                             <th>Seçenekler</th>
@@ -32,8 +31,7 @@
                     </td>
                     <td><%# Eval("ID")%></td>
                     <td><%# Eval("Isim")%></td>
-                    <td><%# Eval("Ozet")%></td>
-                    <td><%# Eval("Detay")%></td>
+                    <td style="width:200px"><%# Eval("Ozet")%></td>
                     <td><%# Eval("KategoriStr")%></td>
                     <td><%# Eval("DurumStr")%></td>
                     <td style="padding: 10px">

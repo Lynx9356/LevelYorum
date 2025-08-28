@@ -25,7 +25,7 @@
                 <asp:CheckBox ID="cb_durum" Text="Aktif" runat="server" />
             </div>
             <div style="text-align: center; width: 50%; margin: 15px 0 0 165px">
-                <asp:LinkButton ID="lbtn_ekle" Text="Kategori Ekle" runat="server" CssClass="ekleButon" OnClick="lbtn_ekle_Click"></asp:LinkButton>
+                <asp:LinkButton ID="lbtn_ekle" Text="Tür Ekle" runat="server" CssClass="ekleButon" OnClick="lbtn_ekle_Click"></asp:LinkButton>
             </div>
         </div>
     </div>

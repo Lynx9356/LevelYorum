@@ -61,7 +61,7 @@ namespace DataAccessLayer
                 {
                     turler += reader.GetString(0) + ",";
                 }
-                turler.Substring(0, turler.Length - 1);
+                turler = turler.Substring(0, turler.Length - 1);
                 return turler;
             }
             catch
@@ -361,7 +361,7 @@ namespace DataAccessLayer
         {
             try
             {
-                cmd.CommandText = "SELECT * FROM Oyunlar WHERE ID=@id";
+                cmd.CommandText = "SELECT o.ID,o.Isim,o.Ozet,o.Detay,o.Foto,o.Durum FROM Oyunlar AS o WHERE ID=@id";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
@@ -504,6 +504,32 @@ namespace DataAccessLayer
                     kullanıcıTur.Add(k);
                 }
                 return kullanıcıTur;
+            }
+            catch
+            {
+
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public string KullaniciStr(int id)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT kt.Isim FROM Kullanicilar AS k JOIN KullaniciTur AS kt ON k.KullaniciTurID=kt.ID WHERE k.ID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                string kullaniciTur = string.Empty;
+                while (reader.Read())
+                {
+                    kullaniciTur = reader.GetString(0);
+                }
+                return kullaniciTur;
             }
             catch
             {
@@ -740,6 +766,41 @@ namespace DataAccessLayer
                 con.Close();
             }
         }
+        public List<Yorumlar> AktifYorumListele(bool durum)
+        {
+            try
+            {
+                List<Yorumlar> yorumlar = new List<Yorumlar>();
+                cmd.CommandText = "SELECT y.ID,k.ID,k.KullaniciAdi,o.ID,o.Isim,y.Icerik,y.Durum FROM Yorumlar AS y JOIN Kullanicilar AS k ON k.ID = y.KullaniciID JOIN Oyunlar AS o ON o.ID = y.OyunID WHERE y.Durum = @durum";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@durum", durum);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Yorumlar y = new Yorumlar();
+                    y.ID = reader.GetInt32(0);
+                    y.KullaniciID = reader.GetInt32(1);
+                    y.KullaniciStr = reader.GetString(2);
+                    y.OyunID = reader.GetInt32(3);
+                    y.OyunStr = reader.GetString(4);
+                    y.Icerik = reader.GetString(5);
+                    y.Durum = reader.GetBoolean(6);
+                    y.DurumStr = reader.GetBoolean(6) ? "<label style='color:green'>Aktif</label>" : "<label style='color:red'>Pasif</label>";
+                    yorumlar.Add(y);
+                }
+                return yorumlar;
+            }
+            catch
+            {
+
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
         public List<Yorumlar> SonYorumlar()
         {
             try
@@ -814,7 +875,7 @@ namespace DataAccessLayer
             try
             {
                 List<Yorumlar> yorumlar = new List<Yorumlar>();
-                cmd.CommandText = "SELECT y.ID,k.ID,k.KullaniciAdi,o.ID,o.Isim,y.Icerik,y.Durum FROM Yorumlar AS y JOIN Kullanicilar AS k ON k.ID = y.KullaniciID JOIN Oyunlar AS o ON o.ID = y.OyunID WHERE y.Durum=@durum AND yer.ID=@id";
+                cmd.CommandText = "SELECT y.ID,k.ID,k.KullaniciAdi,o.ID,o.Isim,y.Icerik,y.Durum FROM Yorumlar AS y JOIN Kullanicilar AS k ON k.ID = y.KullaniciID JOIN Oyunlar AS o ON o.ID = y.OyunID WHERE y.Durum=@durum AND o.ID=@id";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@durum", yorum);
                 cmd.Parameters.AddWithValue("@id", id);
@@ -832,6 +893,11 @@ namespace DataAccessLayer
                     y.Durum = reader.GetBoolean(6);
                     y.DurumStr = reader.GetBoolean(6) ? "<label style='color:green'>Aktif</label>" : "<label style='color:red'>Pasif</label>";
                     yorumlar.Add(y);
+                }
+                con.Close();
+                foreach (Yorumlar item in yorumlar)
+                {
+                    item.KullaniciTurStr = KullaniciStr(item.KullaniciID);
                 }
                 return yorumlar;
             }
@@ -892,6 +958,30 @@ namespace DataAccessLayer
                 }
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public bool YorumEkle(Yorumlar y)
+        {
+            try
+            {
+                cmd.CommandText = "INSERT INTO Yorumlar (KullaniciID,OyunID,Icerik,Durum) VALUES (@kullanıcıid,@oyunid,@icerik,@durum)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@kullanıcıid", y.KullaniciID);
+                cmd.Parameters.AddWithValue("@oyunid", y.OyunID);
+                cmd.Parameters.AddWithValue("@icerik", y.Icerik);
+                cmd.Parameters.AddWithValue("@durum", y.Durum);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 return true;
@@ -1038,13 +1128,14 @@ namespace DataAccessLayer
                 con.Close();
             }
         }
-        public bool OyunKategoriVeriKontrol(string tablo, string kolon, int veri)
+        public bool OyunKategoriVeriKontrol(string tablo, string oyunID,string turID, int oyunveriID, int turveriID)
         {
             try
             {
-                cmd.CommandText = $"SELECT COUNT(*) FROM {tablo} WHERE {kolon} = @id";
+                cmd.CommandText = $"SELECT COUNT(*) FROM {tablo} WHERE {oyunID} = @oyunid AND {turID} = @turid";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id", veri);
+                cmd.Parameters.AddWithValue("@oyunid", oyunveriID);
+                cmd.Parameters.AddWithValue("@turid", turveriID);
                 con.Open();
                 int sayi = Convert.ToInt32(cmd.ExecuteScalar());
                 if (sayi == 0)

@@ -14,7 +14,8 @@
         <div>
             <div class="header">
                 <a href="Default.aspx">
-                    <img src="Foto/LevelYorum.png" width="150"></a>
+                    <img src="Foto/LevelYorum.png" width="150">
+                </a>
                 <h1 class="sayfaAdi">LevelYorum</h1>
                 <div class="kullaniciAdi">
                     <asp:Panel ID="pnl_girisVar" runat="server" Visible="false">

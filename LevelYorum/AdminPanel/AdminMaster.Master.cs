@@ -30,7 +30,7 @@ namespace LevelYorum.AdminPanel
         protected void lbtn_cikis_Click(object sender, EventArgs e)
         {
             Session["kullanici"] = null;
-            Response.Redirect("AdminPanelLogin.aspx");
+            Response.Redirect("../Default.aspx");
         }
     }
 }

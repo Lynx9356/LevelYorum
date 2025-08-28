@@ -47,7 +47,7 @@ namespace LevelYorum.AdminPanel
                     string uzantı = fi.Extension;
                     string isim = Guid.NewGuid().ToString();
                     o.Foto = isim + uzantı;
-                    fu_resim.SaveAs(Server.MapPath("-/Foto/" + isim + uzantı));
+                    fu_resim.SaveAs(Server.MapPath("~/Foto/" + isim + uzantı));
                     if (dm.OyunGuncelle(o))
                     {
                         pnl_basarili.Visible = true;

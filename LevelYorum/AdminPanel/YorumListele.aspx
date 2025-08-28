@@ -17,7 +17,7 @@
                         <tr>
                             <th>Yorum No</th>
                             <th>Kullanıcı Adı</th>
-                            <th>Yer Adı</th>
+                            <th>Oyun Adı</th>
                             <th>İçerik</th>
                             <th>Durum</th>
                         </tr>
@@ -31,7 +31,7 @@
                 <tr>
                     <td><%# Eval("ID")%></td>
                     <td><%# Eval("KullaniciStr")%></td>
-                    <td><%# Eval("YerStr")%></td>
+                    <td><%# Eval("OyunStr")%></td>
                     <td><%# Eval("Icerik")%></td>
                     <td>
                         <asp:LinkButton ID="lbtn_durumDegis" runat="server" CommandName="Degis" CommandArgument='<%# Eval("ID")%>' CssClass="yorumButon"><%# Eval("DurumStr")%></asp:LinkButton>
@@ -62,7 +62,7 @@
                 <tr>
                     <td><%# Eval("ID")%></td>
                     <td><%# Eval("KullaniciStr")%></td>
-                    <td><%# Eval("YerStr")%></td>
+                    <td><%# Eval("OyunStr")%></td>
                     <td><%# Eval("Icerik")%></td>
                     <td>
                         <asp:LinkButton ID="lbtn_durumDegis" runat="server" CommandName="Degis" CommandArgument='<%# Eval("ID")%>' CssClass="yorumButon"><%# Eval("DurumStr")%></asp:LinkButton>
@@ -93,7 +93,7 @@
                 <tr>
                     <td><%# Eval("ID")%></td>
                     <td><%# Eval("KullaniciStr")%></td>
-                    <td><%# Eval("YerStr")%></td>
+                    <td><%# Eval("OyunStr")%></td>
                     <td><%# Eval("Icerik")%></td>
                     <td>
                         <asp:LinkButton ID="lbtn_durumDegis" runat="server" CommandName="Degis" CommandArgument='<%# Eval("ID")%>' CssClass="yorumButon"><%# Eval("DurumStr")%></asp:LinkButton>

@@ -11,6 +11,7 @@ namespace DataAccessLayer
         public int ID { get; set; }
         public int KullaniciID { get; set; }
         public string KullaniciStr { get; set; }
+        public string KullaniciTurStr { get; set; }
         public int OyunID { get; set; }
         public string OyunStr { get; set; }
         public string Icerik { get; set; }

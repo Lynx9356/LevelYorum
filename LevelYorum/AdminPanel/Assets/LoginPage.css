@@ -2,7 +2,7 @@
     background-image: url("../../Foto/god-of-war-2017-to.jpg"); /* Arka plan fotoğrafı kullandığım için body kısmına img url ekledim */
     background-size: cover; /* Ekranı tamamen kaplar */
     background-position: center; /* Ortalar */
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; /* Tekrar Etmesini Engeller */
     min-height: 85vh; /* Tam ekran yüksekliği */
     margin: 0;
     padding: 0;

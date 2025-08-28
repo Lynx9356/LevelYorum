@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 namespace LevelYorum
 {
     public partial class UserMaster : System.Web.UI.MasterPage
-    { 
+    {
         DataModel dm = new DataModel();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -33,6 +33,7 @@ namespace LevelYorum
         protected void lbtn_cikis_Click(object sender, EventArgs e)
         {
             Session["kullanici"] = null;
+            Session["link"] = null;
             Response.Redirect("Default.aspx");
         }
 
